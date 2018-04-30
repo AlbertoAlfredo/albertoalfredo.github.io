@@ -1,0 +1,57 @@
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@mixin icon-style($width) {
+  width: $width;
+  height: $width;
+  line-height: $width;
+}
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+@mixin equal-size($width) {
+  width: $width;
+  height: $width;
+}
+@mixin block-center() {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin web-support($transition) {
+  -webkit-transition: all $transition;
+  -moz-transition: all $transition;
+  transition: all $transition;
+}
+
+@mixin arrow($width, $direction: up, $color:$white-color) {
+  width: 0;
+  height: 0;
+  @if $direction == up {
+    border: {
+      left: $width solid transparent;
+      right: $width solid transparent;
+      bottom: $width solid $color;
+    }
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+  }
+  @if $direction == down {
+    border: {
+      left: $width solid transparent;
+      right: $width solid transparent;
+      top: $width solid $color;
+    }
+    margin: 0 auto;
+    top: -11px;
+    position: relative;
+  }
+}
