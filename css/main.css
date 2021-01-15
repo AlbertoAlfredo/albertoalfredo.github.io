@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: rgba(92, 92, 92, 0.459);
+  background-color: rgba(0, 11, 172, 0.425);
 }
 .body {
   padding: 0px;
@@ -21,4 +21,9 @@ section{
 }
 .titulo{
   color:#8c52ff
+}
+@media (max-width: 600px){
+  .grid{
+    display: block;
+  }
 }
